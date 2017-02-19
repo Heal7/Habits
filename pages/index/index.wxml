@@ -1,0 +1,61 @@
+<!--index.wxml-->
+
+<image class="bg" src="/bg/bg.jpg"></image>
+
+
+<view class="title" >
+  <image src="{{user_info.avatarUrl}}"></image>
+  <text class="title-time" >{{time}}</text>
+  <!--<text class="title-name" >{{user_info.nickName}}</text>-->
+  <view class="weather-div" bindtap="showWeather" >
+    <text class="address" >{{address}}</text>
+    <text class="weather" >{{weather}}</text>
+    <text class="wind_direction">{{wind_direction}}</text>
+    <image src="{{weather_pic}}"></image>
+    <text class="temperature" >{{temperature}}</text>
+  </view>
+</view>
+
+<view class="container">
+    <view class="todos-add"> 
+      <input placeholder="Add..."  placeholder-style="color:#888;text-indent:90rpx;"  type="text" focus bindblur="blurInput" value="{{in_value}}" />
+      <view bindtap="formSubmit">Save</view>
+    </view>
+</view>
+<text class="todos-list-text" >List:</text>
+<scroll-view style="height:780rpx;position:relative;z-index:10;top:-175rpx;background: #3fc1c9;width:86%;margin:0 auto;border-radius:10rpx;border-top-left-radius:0;padding:0 0 20rpx 0;" scroll-y; >
+  <view class="content" wx:for="{{calendar_sign_data}}" >
+    <view class="set-time" >{{item.save_time}}</view>
+    <view class="todos-list-detail" bindtap="navigateTo" data-value="{{item.title}}" data-index-id="{{item.id}}" >{{item.title}}</view>
+    <view  class="button" data-index-id="{{item.id}}"  bindtap="deleteRow" >Clear</view>
+    <view class="circular" >
+      <view class="in-circular" >
+        <text>Done</text>
+        <view>
+          <text class="count">{{item.calendar_sign_count}}</text>
+        </view>
+      </view>
+    </view>
+</view>
+</scroll-view>
+
+<view class="t_content" wx:if="{{show_weather}}" >
+  <view class="t_title" >{{t_time}}</view>
+  <view class="t_day_name " id="{{select_day}}" bindtap="changeDay" >Day</view>
+  <view class="t_night_name " id="{{select_night}}" bindtap="changeNight"  >Night</view>
+  <view class="t_day" wx:if="{{show_day}}" >
+    <text class="t_weather" >{{t_day_weather}}</text>
+    <image class="t_image" src="{{t_day_weather_pic}}"></image>
+    <text class="t_tem" >{{t_day_temperature}}</text>
+    <text class='t_wind' >{{t_day_wind}}</text>
+  </view>
+  <view class="t_night" wx:if="{{show_night}}" >
+    <text class="t_weather" >{{t_night_weather}}</text>
+    <image class="t_image" src="{{t_night_weather_pic}}"></image>
+    <text class="t_tem" >{{t_night_temperature}}</text>
+    <text class='t_wind' >{{t_night_wind}}</text>
+  </view>
+  <view class="close" >
+    <view bindtap="close" >×</view>
+  </view>
+</view>

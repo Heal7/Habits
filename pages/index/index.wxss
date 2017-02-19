@@ -1,0 +1,334 @@
+/**index.wxss**/
+page{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.bg{
+  width: 750rpx;
+  height: 100%;
+  filter: blur(5rpx);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0.1;
+  background-repeat: repeat-y;
+}
+.title{
+  width: 100%;
+  position: relative;
+  font-size: 50rpx; 
+  color: #fff;
+  height: 200rpx;
+  background-color: rgba(54, 79, 107,0.6);
+}
+.title image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  position: absolute;
+  right: 30rpx;
+  top: 10rpx;
+}
+.title .title-time{
+  position: absolute;
+  top: 20rpx;
+  left: 240rpx;
+  font-weight: bold;
+}
+.title .title-name{
+  position: absolute;
+  top: 75rpx;
+  left: 280rpx;
+  width: 400rpx;
+  background: red;
+  font-weight: bold;
+}
+/*天气*/
+.weather-div{
+  width: 270rpx;
+  position: absolute;
+  height: 180rpx;
+  border-radius: 10rpx;
+  top: 5rpx;
+  left: 5rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.weather-div .address{
+ position: absolute;
+ top: 75rpx;
+ left: 145rpx;
+}
+.weather-div .weather{
+  position: absolute;
+  top: 110rpx;
+  left: 30rpx;
+}
+.weather-div .wind_direction{
+  position: absolute;
+  top: 110rpx;
+  left: 110rpx;
+}
+.weather-div .temperature{
+  position: absolute;
+  top: -10rpx;
+  left: 20rpx;
+  font-size: 120rpx;
+  font-weight: bold;
+}
+.weather-div image{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 80rpx;
+  left: 200rpx;
+}
+
+
+.container{
+  position: relative;
+  width: 95%;
+  height: 100rpx;
+  border-radius: 10rpx;
+  margin:0 auto;
+  margin-top: 20rpx;
+}
+.todos-add{
+  width:100%;
+  color: #fff;
+  position: absolute;
+  top: 20rpx;
+}
+.todos-add input{
+  font-size: 50rpx;
+  width:90%;
+  margin:0 auto;
+  background: #fff;
+  padding:25rpx 0;
+  border-radius: 15rpx;
+  color: #000;
+  text-align: center;
+  border-bottom-right-radius: 0;
+  box-shadow: 1rpx 1rpx 8rpx #888;
+}
+.todos-add view{
+  width: 20%;
+  font-size: 45rpx;
+  position: absolute;
+  padding: 20rpx 10rpx;
+  text-align: center;
+  background: #fff;
+  color: #888;
+  right: 37rpx;
+  border: none;
+  top: 100rpx;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  font-weight: bold;
+}
+
+
+.todos-list-text{
+  color: #fff;
+  font-size: 50rpx;
+  position: absolute;
+  left: 53rpx;
+  top: 355rpx;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  padding: 13rpx 15rpx 20rpx 15rpx;
+  background: #3fc1c9;
+}
+
+.content{
+  width: 90%;
+  height: 300rpx;
+  position: relative;
+  border-radius: 5rpx;
+  border-top-left-radius: 0;
+  margin:0 auto;
+  margin-top: 20rpx;
+}
+.content .circular{
+  background:#fce38a;
+  height: 46%;
+  width: 30%;
+  position: absolute;
+  right: -30rpx;
+  top: 70rpx;
+}
+.content .in-circular{
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 15rpx;
+  border-bottom-left-radius: 15rpx;
+  background: #3fc1c9;
+  color: #fff;
+  position: relative;
+  left: 15rpx;
+}
+.content .in-circular text:first-child{
+  width: 100%;
+  text-align: center;
+  display: block;
+  position: relative;
+  top: 15rpx;
+}
+.content .in-circular view .count{
+  display: block;
+  position: relative;
+  top: 0rpx;
+  left: 0rpx;
+  font-size: 90rpx;
+  font-weight: bold;
+  color: #000;
+}
+.content .set-time{
+  width: 30%;
+  position: absolute;
+  top:6rpx;
+  right: -31rpx;
+  color: #888;
+  font-weight: bold;
+  background:#fce38a;
+  text-indent: 60rpx;
+  font-size: 35rpx;
+  padding: 15rpx 0; 
+  border-top-right-radius: 5rpx;
+}
+.content .button{
+  width: 30%;
+  position: absolute;
+  bottom:10rpx;
+  right: -31rpx;
+  color: #000;
+  font-weight: bold;
+  background:#fce38a;
+  text-indent: 50rpx;
+  font-size: 45rpx;
+  padding: 18rpx 0; 
+  border-bottom-right-radius: 5rpx;
+}
+.content .todos-list-detail{
+  box-sizing: border-box;
+  font-size: 40rpx;
+  padding: 10rpx  10rpx;
+  font-weight: bold;
+  color: #000; 
+  border-radius: 10rpx;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  position: absolute;
+  left: 10rpx;
+  bottom: 10rpx;
+  width: 74%;
+  height: 95%;
+  background: #fce38a;
+  overflow: scroll;
+}
+
+
+
+.t_content{
+  width: 100%;
+  height: 1060rpx;
+  background: rgba(54, 79, 107, 0.6);
+  position: absolute;
+  top: 200rpx;
+  z-index: 10;
+}
+.t_content .t_title{
+  position: absolute;
+  font-weight: bold;
+  color: #fff;
+  font-size: 50rpx;
+  left: 20rpx;
+}
+.t_content .t_day_name{
+  width: 50%;
+  background: #6a7efc;
+  font-size: 40rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  text-align: center;
+  padding: 30rpx 0;
+  background: rgba(54, 79, 107, 0.7);
+  font-weight: bold;
+}
+.t_name{
+  font-size: 45rpx;
+  width: 100%;
+  text-align: center;
+}
+.t_weather{
+  position: absolute;
+  font-size: 70rpx;
+  color: #fff;
+  font-weight: bold;
+  bottom: 400rpx;
+  left: 150rpx;
+}
+.t_image{
+  width: 180rpx;
+  height: 180rpx;
+  position: absolute;
+  bottom: 500rpx;
+  right: 50rpx;
+}
+.t_wind{
+  position: absolute;
+  font-size: 70rpx;
+  color: #fff;
+  font-weight: bold;
+  bottom: 300rpx;
+  left: 150rpx;
+}
+.t_tem{
+  position: absolute;
+  font-size: 360rpx;
+  color: #fff;
+  font-weight: bold;
+  top: 160rpx;
+  left: 120rpx;
+}
+.t_content .t_night_name{
+  background: rgba(54, 79, 107, 0.7);
+  padding: 30rpx 0;
+  text-align: center;
+  color: #fff;
+  width: 50%;
+  font-size: 40rpx;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-weight: bold;
+}
+.close{
+  width: 0;
+  height: 0;
+  border: 100rpx solid rgba(54, 79, 107, 0.6);
+  border-color: transparent rgba(54, 79, 107, 0.7) rgba(54, 79, 107, 0.7) transparent   ;
+  position: absolute;
+  bottom: 100rpx;
+  right: 0;
+  color: #fff;
+  font-size: 60rpx;
+  font-weight: bold;
+}
+.close view{
+  position: absolute;
+  left: -5rpx;
+  top: -15rpx;
+  text-align: center;
+  padding: 20rpx 0;
+  width: 110rpx;
+}
+#select{
+  background: #2d4059;
+}
+
+
+
